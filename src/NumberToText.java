@@ -22,7 +22,11 @@ public class NumberToText {
             int tmp = in / 100;
             out += getTextLower10(tmp);
             out += " hundred";
-            out += " " + getTextLower100(in % 100);
+            if(in%100 <20 && in%100 >=10){
+                out += " " + getTextLower20(in % 100);
+            }else{
+                out += " " + getTextLower100(in % 100);
+            }
         }
         return out;
 
