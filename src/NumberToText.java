@@ -21,7 +21,7 @@ public class NumberToText {
         } else{
             int tmp = in / 100;
             out += getTextLower10(tmp);
-            out += " hundred";
+            out += " hundred and";
             if(in%100 <20 && in%100 >=10){
                 out += " " + getTextLower20(in % 100);
             }else{
